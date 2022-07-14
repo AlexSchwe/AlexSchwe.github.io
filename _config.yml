@@ -33,6 +33,7 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-remote-them
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -53,3 +54,9 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+remote-theme: vaibhavvikas/jekyll-theme-minimalistic
+
+collections:
+  authors:
+    output: true
