@@ -50,7 +50,7 @@ nc -vt $IP_BOX 21
 
 ```smbclient -U 'anonymous' -N $BOX```` 
 ```enum4linux```
-
+```nmap -p139,445 --script smb-vuln* $IP_BOX```
 
 ### RPC 135 ##
 
