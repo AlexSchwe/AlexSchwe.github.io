@@ -25,8 +25,18 @@ download iisfinal.txt on https://book.hacktricks.xyz/network-services-pentesting
 ## Check when a page appears
 atch -n "curl http://$page"
 
+
+### Port 111 NFS ###
+
+nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount $IP_BOX
+
+# show version #
+nc -vt $IP_BOX 21
+
 ### Port 445 ###
 
+
+```nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse `$IP_BOX```
 ```crackmapexec smb $BOX```  
 ```crackmapexec smb $BOX --shares```
 
@@ -42,7 +52,14 @@ atch -n "curl http://$page"
 ```enum4linux```
 
 
-### RPC
+### RPC 135 ##
+
+Can be used to collect addresses that might feed nmap
+Use the script provided in this page https://airbus-cyber-security.com/the-oxid-resolver-part-1-remote-enumeration-of-network-interfaces-without-any-authentication/
+python rpc.py -t  IP_BOX
+Then, if an ipv6 address can be stolen, use nmap -6
+
+### RPC 139 445
 ```rpcclient $BOX```  
 ```rpcclient -U '' -N $BOX  
 >enumdomusers
