@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scores>
+        <score>
+                <game>Pacman</game>
+                <highscore>1337</highscore>
+        </score>
+        <score>
+                <game>Space Invaders</game>
+                <highscore>2600</highscore>
+        </score>
+        <score>
+                <game>Pong</game>
+                <highscore>1024</highscore>
+        </score>
+</scores>
