@@ -75,7 +75,9 @@ Then, if an ipv6 address can be stolen, use nmap -6
 
 ## Ldap,445
 
-#### To get naming context
+ldapsearch -LLL -x -H ldap://$BOX -b '' -s base '(objectclass=\*)'
+
+#### To get naming context (failed to retry)
 ```ldapsearch -x -h $BOX -s base namingcontexts```` 
 #### Then copy the DC  
 ```ldapsearch -x -h $BOX -b '$DC;'```
