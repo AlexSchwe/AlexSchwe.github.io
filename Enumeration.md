@@ -52,6 +52,10 @@ nc -vt $IP_BOX 21
 ```enum4linux```
 ```nmap -p139,445 --script smb-vuln* $IP_BOX```
 
+If just a list of users, try them with their login as passwords
+```crackmapexec smb 10.10.10.172 -u users.txt -p users.txt --continue-on-success```
+
+
 ### RPC 135 ##
 
 Can be used to collect addresses that might feed nmap
