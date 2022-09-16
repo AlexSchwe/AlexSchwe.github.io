@@ -1,0 +1,4 @@
+git branch
+git log
+git checkout $branch
+git diff $commit_numer $commit_number2
