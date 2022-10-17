@@ -1,0 +1,2 @@
+dig axfr trick.htb @trick.htb
+#to find new cname
