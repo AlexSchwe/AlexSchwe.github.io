@@ -1,3 +1,4 @@
+https://github.com/danielmiessler/SecLists/blob/master/Fuzzing/LFI/LFI-Jhaddix.txt
 http://google.com/
 etc/passwd
 etc/passwd%00
