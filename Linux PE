@@ -1,1 +1,4 @@
 https://github.com/DominicBreuker/pspy
+
+#To check for sql credentials
+grep -R "3306" .
